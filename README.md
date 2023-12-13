@@ -19,7 +19,7 @@ You may also want to see the original README of [DomainBed](https://github.com/f
 
 **train_all.py**: the training file for the base and incremental tasks. 
 
-**run_script**: To perform experiments on different datasets or methods, please look at the corresponding shell script file within the run_script folder.
+**run_script**: To conduct experiments using various datasets or methods, please refer to the respective shell script files located in the 'run_script' folder.
 
 ## Citations
 
