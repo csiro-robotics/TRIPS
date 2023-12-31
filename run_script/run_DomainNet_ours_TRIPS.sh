@@ -22,7 +22,7 @@ declare PROTO_cov_MovingAvg_eta=(0.10)
 declare PROTO_cov_Balance_beta=1.0
 declare hparam_PROTO_cov_name=("005010")
 
-declare EXP_NAME='TRIPS_w_'$NUM_OF_EXEMPLAR'_exemplar_'$BACKBONE_name'_'$NUM_OF_STEPS'_steps_'$BATCH_SIZE'_batch_size_lr_5e-5_optimizer_adam_iid_'$hparam_LOSS_lambda_c'_'$hparam_LOSS_lambda_d'_'$hparam_LOSS_lambda_t'_loss_Proto_shifting_COV_AUG_'${hparam_PROTO_cov_name[$hparam_PROTO_cov_index]}'10'
+declare EXP_NAME='TRIPS_w_'$NUM_OF_EXEMPLAR'_exemplar_'$BACKBONE_name'_'$NUM_OF_STEPS'_steps_'$BATCH_SIZE'_batch_size_lr_5e-5_optimizer_adam_iid_loss_'$hparam_LOSS_lambda_c'_'$hparam_LOSS_lambda_d'_'$hparam_LOSS_lambda_t'_loss_Proto_shifting_COV_AUG_'${hparam_PROTO_cov_name[$hparam_PROTO_cov_index]}'10'
 
 declare CODE_PTH='/DGCIL_TRIPS'
 declare DATA_PTH='/DATA'
@@ -40,22 +40,22 @@ echo "Start Job Running."
 
 python train_all.py ${EXP_NAME}_session_0 \
       --data_dir $DATA_PTH \
-      --dataset OfficeHome_INC \
+      --dataset DomainNet_INC \
       --algorithm TRIPLET_DIST_W_PROTO \
       --deterministic \
       --trial_seed $TRIAL_SEED_VALUE \
       --checkpoint_freq 100 \
       --steps $NUM_OF_STEPS \
-      --batch_size $BATCH_SIZE \
       --model_save 50 \
+      --batch_size $BATCH_SIZE \
       --current_session 0 \
       --model_type iid \
       --num_old_cls 0 \
-      --num_new_cls 15 \
+      --num_new_cls 26 \
       --num_of_exemplar $NUM_OF_EXEMPLAR \
-      --TRIPLET_w_cross_entropy \
       --resnet18 $RESNET_18 \
       --resnet34 $RESNET_34 \
+      --TRIPLET_w_cross_entropy \
       --off_swad \
       --margin 0 \
       --triplet_dist_type euclidean_dist \
@@ -79,23 +79,23 @@ python train_all.py ${EXP_NAME}_session_0 \
 
 python train_all.py ${EXP_NAME}_session_1 \
       --data_dir $DATA_PTH \
-      --dataset OfficeHome_INC \
+      --dataset DomainNet_INC \
       --algorithm TRIPLET_DIST_W_PROTO \
       --deterministic \
       --trial_seed $TRIAL_SEED_VALUE \
       --checkpoint_freq 100 \
       --steps $NUM_OF_STEPS \
-      --batch_size $BATCH_SIZE \
       --model_save 50 \
+      --batch_size $BATCH_SIZE \
       --current_session 1 \
-      --model_type iid \
       --load_old_info ${EXP_NAME}_session_0 \
-      --num_old_cls 15 \
-      --num_new_cls 10 \
+      --model_type iid \
+      --num_old_cls 26 \
+      --num_new_cls 20 \
       --num_of_exemplar $NUM_OF_EXEMPLAR \
-      --TRIPLET_w_cross_entropy \
       --resnet18 $RESNET_18 \
       --resnet34 $RESNET_34 \
+      --TRIPLET_w_cross_entropy \
       --off_swad \
       --margin 0 \
       --triplet_dist_type euclidean_dist \
@@ -114,28 +114,28 @@ python train_all.py ${EXP_NAME}_session_1 \
       --hparam_PROTO_cov_Shrinkage_alpha ${PROTO_cov_Shrinkage_alpha[$hparam_PROTO_cov_index]} \
       --hparam_PROTO_cov_MovingAvg_eta ${PROTO_cov_MovingAvg_eta[$hparam_PROTO_cov_index]} \
       --hparam_PROTO_cov_Balance_beta $PROTO_cov_Balance_beta
-
+      
 # session 2 --------------------------------------------------------------
 
 python train_all.py ${EXP_NAME}_session_2 \
       --data_dir $DATA_PTH \
-      --dataset OfficeHome_INC \
+      --dataset DomainNet_INC \
       --algorithm TRIPLET_DIST_W_PROTO \
       --deterministic \
       --trial_seed $TRIAL_SEED_VALUE \
       --checkpoint_freq 100 \
       --steps $NUM_OF_STEPS \
-      --batch_size $BATCH_SIZE \
       --model_save 50 \
+      --batch_size $BATCH_SIZE \
       --current_session 2 \
-      --model_type iid \
       --load_old_info ${EXP_NAME}_session_1 \
-      --num_old_cls 25 \
-      --num_new_cls 10 \
+      --model_type iid \
+      --num_old_cls 46 \
+      --num_new_cls 20 \
       --num_of_exemplar $NUM_OF_EXEMPLAR \
-      --TRIPLET_w_cross_entropy \
       --resnet18 $RESNET_18 \
       --resnet34 $RESNET_34 \
+      --TRIPLET_w_cross_entropy \
       --off_swad \
       --margin 0 \
       --triplet_dist_type euclidean_dist \
@@ -159,23 +159,23 @@ python train_all.py ${EXP_NAME}_session_2 \
 
 python train_all.py ${EXP_NAME}_session_3 \
       --data_dir $DATA_PTH \
-      --dataset OfficeHome_INC \
+      --dataset DomainNet_INC \
       --algorithm TRIPLET_DIST_W_PROTO \
       --deterministic \
       --trial_seed $TRIAL_SEED_VALUE \
       --checkpoint_freq 100 \
       --steps $NUM_OF_STEPS \
-      --batch_size $BATCH_SIZE \
       --model_save 50 \
+      --batch_size $BATCH_SIZE \
       --current_session 3 \
-      --model_type iid \
       --load_old_info ${EXP_NAME}_session_2 \
-      --num_old_cls 35 \
-      --num_new_cls 10 \
+      --model_type iid \
+      --num_old_cls 66 \
+      --num_new_cls 20 \
       --num_of_exemplar $NUM_OF_EXEMPLAR \
-      --TRIPLET_w_cross_entropy \
       --resnet18 $RESNET_18 \
       --resnet34 $RESNET_34 \
+      --TRIPLET_w_cross_entropy \
       --off_swad \
       --margin 0 \
       --triplet_dist_type euclidean_dist \
@@ -199,23 +199,23 @@ python train_all.py ${EXP_NAME}_session_3 \
 
 python train_all.py ${EXP_NAME}_session_4 \
       --data_dir $DATA_PTH \
-      --dataset OfficeHome_INC \
+      --dataset DomainNet_INC \
       --algorithm TRIPLET_DIST_W_PROTO \
       --deterministic \
       --trial_seed $TRIAL_SEED_VALUE \
       --checkpoint_freq 100 \
       --steps $NUM_OF_STEPS \
-      --batch_size $BATCH_SIZE \
       --model_save 50 \
+      --batch_size $BATCH_SIZE \
       --current_session 4 \
-      --model_type iid \
       --load_old_info ${EXP_NAME}_session_3 \
-      --num_old_cls 45 \
-      --num_new_cls 10 \
+      --model_type iid \
+      --num_old_cls 86 \
+      --num_new_cls 20 \
       --num_of_exemplar $NUM_OF_EXEMPLAR \
-      --TRIPLET_w_cross_entropy \
       --resnet18 $RESNET_18 \
       --resnet34 $RESNET_34 \
+      --TRIPLET_w_cross_entropy \
       --off_swad \
       --margin 0 \
       --triplet_dist_type euclidean_dist \
@@ -239,23 +239,23 @@ python train_all.py ${EXP_NAME}_session_4 \
 
 python train_all.py ${EXP_NAME}_session_5 \
       --data_dir $DATA_PTH \
-      --dataset OfficeHome_INC \
+      --dataset DomainNet_INC \
       --algorithm TRIPLET_DIST_W_PROTO \
       --deterministic \
       --trial_seed $TRIAL_SEED_VALUE \
       --checkpoint_freq 100 \
       --steps $NUM_OF_STEPS \
-      --batch_size $BATCH_SIZE \
       --model_save 50 \
+      --batch_size $BATCH_SIZE \
       --current_session 5 \
-      --model_type iid \
       --load_old_info ${EXP_NAME}_session_4 \
-      --num_old_cls 55 \
-      --num_new_cls 10 \
+      --model_type iid \
+      --num_old_cls 106 \
+      --num_new_cls 20 \
       --num_of_exemplar $NUM_OF_EXEMPLAR \
-      --TRIPLET_w_cross_entropy \
       --resnet18 $RESNET_18 \
       --resnet34 $RESNET_34 \
+      --TRIPLET_w_cross_entropy \
       --off_swad \
       --margin 0 \
       --triplet_dist_type euclidean_dist \
@@ -274,6 +274,4 @@ python train_all.py ${EXP_NAME}_session_5 \
       --hparam_PROTO_cov_Shrinkage_alpha ${PROTO_cov_Shrinkage_alpha[$hparam_PROTO_cov_index]} \
       --hparam_PROTO_cov_MovingAvg_eta ${PROTO_cov_MovingAvg_eta[$hparam_PROTO_cov_index]} \
       --hparam_PROTO_cov_Balance_beta $PROTO_cov_Balance_beta
-
-
 

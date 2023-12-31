@@ -7,7 +7,9 @@ declare hparam_LOSS_lambda_d=30
 declare RESNET_34=true
 declare RESNET_18=false
 declare BACKBONE_name="ResNet34"
+
 declare EXP_NAME='MSL_MOV_w_'$NUM_OF_EXEMPLAR'_exemplar_ResNet34_'$NUM_OF_STEPS'_steps_'$BATCH_SIZE'_batch_size_default_lr_optimizer_iid_'$hparam_LOSS_lambda_c'_'$hparam_LOSS_lambda_d'_loss_DATA_AUG'
+
 declare CODE_PTH='/DGCIL_TRIPS'
 declare DATA_PTH='/DATA'
 cd $CODE_PTH

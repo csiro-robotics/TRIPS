@@ -10,6 +10,7 @@ declare hparam_LOSS_lambda_c=1
 declare hparam_LOSS_lambda_d=30
 
 declare EXP_NAME='ERM_DIST_w_'$NUM_OF_EXEMPLAR'_exemplar_'$BACKBONE_name'_'$NUM_OF_STEPS'_steps_'$BATCH_SIZE'_batch_size_default_lr_optimizer_iid_feature_normalized_'$hparam_LOSS_lambda_c'_'$hparam_LOSS_lambda_d'_loss'
+
 declare CODE_PTH='/DGCIL_TRIPS'
 declare DATA_PTH='/DATA'
 cd $CODE_PTH

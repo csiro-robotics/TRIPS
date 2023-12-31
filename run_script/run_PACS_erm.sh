@@ -4,7 +4,9 @@ declare NUM_OF_STEPS=5001
 declare RESNET_34=true
 declare RESNET_18=false
 declare BACKBONE_name="ResNet34"
-declare EXP_NAME='PACS_INC_ERM_w_'$NUM_OF_EXEMPLAR'_exemplar_ResNet34_'$NUM_OF_STEPS'_steps_default_lr_optimizer_iid'
+
+declare EXP_NAME='ERM_w_'$NUM_OF_EXEMPLAR'_exemplar_ResNet34_'$NUM_OF_STEPS'_steps_default_lr_optimizer_iid'
+
 declare CODE_PTH='/DGCIL_TRIPS'
 declare DATA_PTH='/DATA'
 cd $CODE_PTH

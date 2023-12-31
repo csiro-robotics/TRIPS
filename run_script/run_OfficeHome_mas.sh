@@ -7,6 +7,7 @@ declare RESNET_18=false
 declare BACKBONE_name="ResNet34"
 
 declare EXP_NAME='MAS_w_'$NUM_OF_EXEMPLAR'_exemplar_ResNet34_default_lr_optimizer_0_iid'
+
 declare CODE_PTH='/DGCIL_TRIPS'
 declare DATA_PTH='/DATA'
 cd $CODE_PTH

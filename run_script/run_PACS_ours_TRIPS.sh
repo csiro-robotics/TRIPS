@@ -22,7 +22,7 @@ declare PROTO_cov_MovingAvg_eta=(0.10)
 declare PROTO_cov_Balance_beta=1.0
 declare hparam_PROTO_cov_name=("005010")
 
-declare EXP_NAME='TRIPLET_DIST_W_PROTO_w_'$NUM_OF_EXEMPLAR'_exemplar_'$BACKBONE_name'_'$NUM_OF_STEPS'_steps_'$BATCH_SIZE'_batch_size_lr_5e-5_optimizer_adam_iid_'$hparam_LOSS_lambda_c'_'$hparam_LOSS_lambda_d'_'$hparam_LOSS_lambda_t'_loss_DATA_AUG_Proto_shifting_COV_AUG_'${hparam_PROTO_cov_name[$hparam_PROTO_cov_index]}'10'
+declare EXP_NAME='TRIPS_w_'$NUM_OF_EXEMPLAR'_exemplar_'$BACKBONE_name'_'$NUM_OF_STEPS'_steps_'$BATCH_SIZE'_batch_size_lr_5e-5_optimizer_adam_iid_'$hparam_LOSS_lambda_c'_'$hparam_LOSS_lambda_d'_'$hparam_LOSS_lambda_t'_loss_DATA_AUG_Proto_shifting_COV_AUG_'${hparam_PROTO_cov_name[$hparam_PROTO_cov_index]}'10'
 
 declare CODE_PTH='/DGCIL_TRIPS'
 declare DATA_PTH='/DATA'
