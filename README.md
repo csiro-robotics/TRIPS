@@ -1,4 +1,4 @@
-# DGCIL_TRIPS
+# TRIPS
 
 This project hosts the code for implementing the TRIPS algorithm for the Domain-Generalized Class-Incremental Learning (DGCIL) task, as presented in our paper:
 
