@@ -1,12 +1,35 @@
 # TRIPS
 
+This is the official repository for the CVIU 2024 paper: [Multivariate Prototype Representation for Domain-Generalized Incremental Learning](https://www.sciencedirect.com/science/article/pii/S1077314224002960)
+
+<!-- markdownlint-disable first-line-h1 -->
+<!-- markdownlint-disable html -->
+<!-- markdownlint-disable no-duplicate-header -->
+
+<p align="center">
+  <a href="https://github.com/csiro-robotics/TRIPS/commits/main">
+    <img src="https://img.shields.io/github/last-commit/csiro-robotics/TRIPS" alt="Last Commit" />
+  </a>
+  <a href="https://github.com/csiro-robotics/TRIPS/issues">
+    <img src="https://img.shields.io/github/issues/csiro-robotics/TRIPS" alt="Issues" />
+  </a>
+  <a href="https://github.com/csiro-robotics/TRIPS/pulls">
+    <img src="https://img.shields.io/github/issues-pr/csiro-robotics/TRIPS" alt="Pull Requests" />
+  </a>
+  <a href="https://github.com/csiro-robotics/Pair-VPR/stargazers">
+    <img src="https://img.shields.io/github/stars/csiro-robotics/TRIPS?style=social" alt="Stars" />
+  </a>
+</p>
+
+
 This project hosts the code for implementing the TRIPS algorithm for the Domain-Generalized Class-Incremental Learning (DGCIL) task, as presented in our paper:
 
 ## [Multivariate Prototype Representation for Domain-Generalized Incremental Learning]
 
-Can Peng, Piotr Koniusz, Kaiyu Guo, Brian C. Lovell, Peyman Moghadam.
+Can Peng, Piotr Koniusz, Kaiyu Guo, Brian C. Lovell, Peyman Moghadam. 
 
 [arXiv preprint](https://arxiv.org/pdf/2309.13563.pdf).
+[CVIU Open ACCESS](https://doi.org/10.1016/j.cviu.2024.104215) 
 
 ## Installation
 This DGCIL_TRIPS implementation is based on DomainBed. Therefore the installation is the same as the original DomainBed benchmark.
@@ -26,11 +49,14 @@ You may also want to see the original README of [DomainBed](https://github.com/f
 Please consider citing the following paper in your publications if it helps your research.
 
 ```latexlatex
-@article{peng2023multivariate,
-  title={Multivariate Prototype Representation for Domain-Generalized Incremental Learning},
-  author={Peng, Can and Koniusz, Piotr and Guo, Kaiyu and Lovell, Brian C and Moghadam, Peyman},
-  journal={arXiv preprint arXiv:2309.13563},
-  year={2023}
+@article{PENG2024TRIPS,
+title = {Multivariate prototype representation for domain-generalized incremental learning},
+author = {Can Peng and Piotr Koniusz and Kaiyu Guo and Brian C. Lovell and Peyman Moghadam},
+journal = {Computer Vision and Image Understanding},
+volume = {249},
+pages = {104215},
+year = {2024},
+issn = {1077-3142}
 }
 ```
 
