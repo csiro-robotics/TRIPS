@@ -16,7 +16,7 @@ This is the official repository for the CVIU 2024 Journal article: [Multivariate
   <a href="https://github.com/csiro-robotics/TRIPS/pulls">
     <img src="https://img.shields.io/github/issues-pr/csiro-robotics/TRIPS" alt="Pull Requests" />
   </a>
-  <a href="https://github.com/csiro-robotics/Pair-VPR/stargazers">
+  <a href="https://github.com/csiro-robotics/TRIPS/stargazers">
     <img src="https://img.shields.io/github/stars/csiro-robotics/TRIPS?style=social" alt="Stars" />
   </a>
 </p>
