@@ -25,6 +25,9 @@ This is the official repository for the CVIU 2024 Journal article: [Multivariate
 
 In this paper, we address the critical yet less explored Domain-Generalized Class-Incremental Learning (DGCIL) task. We propose a DGCIL approach designed to memorize old classes, adapt to new classes, and reliably classify objects from unseen domains. Specifically, our loss formulation maintains classification boundaries while suppressing domain-specific information for each class. Without storing old exemplars, we employ knowledge distillation and estimate the drift of old class prototypes as incremental training progresses. Our prototype representations are based on multivariate Normal distributions, with means and covariances continually adapted to reflect evolving model features, providing effective representations for old classes. We then sample pseudo-features for these old classes from the adapted Normal distributions using Cholesky decomposition. Unlike previous pseudo-feature sampling strategies that rely solely on average mean prototypes, our method captures richer semantic variations. Experiments on several benchmarks demonstrate the superior performance of our method compared to the state of the art.
 
+![TRIPS pipeline](images/TRIPS.jpg)
+
+
 This github hosts the code for implementing the TRIPS algorithm for the Domain-Generalized Class-Incremental Learning (DGCIL) task, as presented in our paper:
 
 ## [Multivariate Prototype Representation for Domain-Generalized Incremental Learning]
